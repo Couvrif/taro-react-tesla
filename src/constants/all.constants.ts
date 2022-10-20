@@ -1,0 +1,5 @@
+export const GET_FIND_DATA = 'GET_FIND_DATA'
+export const GET_TESLA_DATA = 'GET_TESLA_DATA'
+export const GET_COLOR_INDEX = 'GET_COLOR_INDEX'
+export const GET_WHEEL_INDEX = 'GET_WHEEL_INDEX'
+export const GET_SHOP_DATA = 'GET_SHOP_DATA'

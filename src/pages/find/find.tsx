@@ -7,9 +7,10 @@ import * as other from '../../services/other.services'
 import { get as getGlobalData} from '../../utils/global_data'
 import { showToast } from '../../utils/message'
 import './find.less'
-import Footer from '@/components/common/footer'
+// import Footer from '@/components/common/footer'
 import { baseUrl } from '../../utils/config'
 import BackTop from '../../components/common/back_top'
+import allAction from '../../actions/all.action'
 
 export default function Index() {
 
@@ -143,6 +144,16 @@ export default function Index() {
     // })
   }
 
+  const testReq = async () => {
+    // findAction.getShopDataAction()
+    allAction.changeWheelAction(2)
+    console.log('test',state,allAction);
+  }
+
+  const lookState = () => {
+    console.log('ass',state);
+  }
+
   useEffect(() => {
     onload()
   }, [])
@@ -181,7 +192,8 @@ export default function Index() {
                 <Block>
                   <View className='no-activity-txt'>你好, 这是</View>
                   <View className='no-activity-txt-blue' onClick={() => pageClick(true)}>{helloText}</View>
-                  <View className='no-activity-txt'>开发环境</View>
+                  <View className='no-activity-txt' onClick={() => testReq()}>开发环境</View>
+                  <View onClick={()=>{lookState()}}>看看</View>
                 </Block>
               </View>
             </View>
@@ -193,7 +205,7 @@ export default function Index() {
         showTop &&
         <BackTop></BackTop>
       }
-      <Footer index='index'></Footer>
+      {/* <Footer index='index'></Footer> */}
     </View>
   )
 }
