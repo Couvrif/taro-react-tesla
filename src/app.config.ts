@@ -4,6 +4,9 @@ export default {
     "pages/tesla/tesla",
     "pages/map/map",
     "pages/shop/shop",
+    "pages/shop/mall/mall",
+    "pages/shop/zone/zone",
+    "pages/find/findinfo/findinfo",
   ],
   tabBar: {
     list: [{

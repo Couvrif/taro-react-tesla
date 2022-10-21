@@ -24,6 +24,7 @@
     "paths": {
       "@/components/*": ["./src/components/*"],
       "@/services/*": ["./src/services/*"],
+      "@/actions/*": ["./src/actions/*"],
     }
   },
   "include": ["./src", "global.d.ts"],

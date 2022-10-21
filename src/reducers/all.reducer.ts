@@ -13,14 +13,15 @@ export default function reducers(state = INITIAL_STATE, action) {
     case constants.GET_SHOP_DATA:
       return { ...state, shopData: action.payload }
     case constants.GET_FIND_DATA:
-      return { ...state, findData: action.payload }
+      const {newsList}=action.payload.data
+      return { ...state, findData: newsList }
     case constants.GET_TESLA_DATA:
-      return { ...state, teslaData: action.payload }
+      const { rotationImg } = action.payload.data
+      return { ...state, teslaData: rotationImg }
     case constants.GET_COLOR_INDEX:
       return { ...state, colorIndex: action.payload }
     case constants.GET_WHEEL_INDEX:
-      console.log('action', action);
-      return { ...state, wheelIndex: 12 }
+      return { ...state, wheelIndex: action.payload }
     default:
       return state
   }

@@ -18,8 +18,8 @@ export const login = createApiAction(USER_LOGIN, (data) => api.post('auth/login'
 export const emptyState = createAction(EMPTY_STATE)
 
 export default bindActionCreators({
-  login, 
+  login,
   emptyState
-  // getUserInfo, 
-  // getUserResidents, getUserRealResult , getUserContacts, 
-}, store.dispatch)
+  // getUserInfo,
+  // getUserResidents, getUserRealResult , getUserContacts,
+}, store().dispatch)
